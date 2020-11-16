@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<style>
+    
+
+    body {
+        background: #ffdd94;
+        background: linear-gradient(to right, #ffdd80, #fa897b);
+        }
+
+
+</style>
+<body>
+    <div class="container">
+        <div class="row">
+          <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
+            <div class="card card-signin my-5">
+              <div class="card-body">
+                <h3 class="card-title text-center">เข้าสู่ระบบ</h3>
+                <form class="form-signin">
+                  <div class="form-label-group">
+                    <form>
+                      <div class="form-group">
+                      <label for="exampleInputPassword1">กรุณาใส่รหัสผ่าน</label>
+                      <input type="password" class="form-control col-sm-15" id="password">
+                      <input type="checkbox" onclick="showpw()"> Show Password
+                      </div>
+                  </form> 
+                    
+                        <button type="button" class="btn btn-primary" onclick="login()">เข้าสู่ระบบ</button>    
+                
+                    <div display: none; id="retrieve"></div>
+                </form>
+            </div>
+          </div>
+        </div>
+      </div>
+
+<script>
+    function showpw(){
+        var showpw = document.getElementById("password");
+        if (showpw.type === "password") {
+            showpw.type = "text";
+        } else {
+            showpw.type = "password";
+        }
+    }
+
+    function login(){
+        checkpassword= document.getElementById("password").value
+        password1 = "1234"
+        if(checkpassword == password1 ){
+            alert('รหัสผ่านถูกต้อง');
+            
+        }else if(checkpassword != password1 ){
+            alert('รหัสผ่านไม่ถูกต้อง กรุณากรอกรหัสผ่านใหม่');
+        }
+    }
+</script>
+</body>
+</html>
